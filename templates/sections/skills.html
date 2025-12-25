@@ -1,0 +1,146 @@
+<h2 class="section-title">Technical Arsenal</h2>
+
+<style>
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .skill-card {
+        padding: 30px;
+        background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(138, 43, 226, 0.05));
+        border-radius: 15px;
+        border: 1px solid rgba(0, 212, 255, 0.15);
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .skill-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+        opacity: 0;
+        transition: all 0.6s ease;
+    }
+
+    .skill-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        border-color: rgba(0, 212, 255, 0.5);
+        box-shadow: 0 15px 50px rgba(0, 212, 255, 0.25);
+    }
+
+    .skill-card:hover::before {
+        opacity: 1;
+        top: -10%;
+        right: -10%;
+    }
+
+    .skill-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .skill-icon {
+        font-size: 2.5rem;
+        filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+    }
+
+    .skill-card:nth-child(2) .skill-icon { animation-delay: 0.5s; }
+    .skill-card:nth-child(3) .skill-icon { animation-delay: 1s; }
+    .skill-card:nth-child(4) .skill-icon { animation-delay: 1.5s; }
+    .skill-card:nth-child(5) .skill-icon { animation-delay: 2s; }
+    .skill-card:nth-child(6) .skill-icon { animation-delay: 2.5s; }
+
+    .skill-category {
+        font-size: 1.3rem;
+        font-weight: bold;
+        background: linear-gradient(135deg, #ffffff, #00d4ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .skill-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .skill-tag {
+        padding: 8px 16px;
+        background: rgba(138, 43, 226, 0.15);
+        border: 1px solid rgba(138, 43, 226, 0.3);
+        border-radius: 20px;
+        color: #c0c0c0;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .skill-tag::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: radial-gradient(circle, rgba(0, 212, 255, 0.3), transparent);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s ease;
+    }
+
+    .skill-tag:hover {
+        background: rgba(0, 212, 255, 0.2);
+        border-color: rgba(0, 212, 255, 0.5);
+        color: #ffffff;
+        transform: translateY(-2px);
+    }
+
+    .skill-tag:hover::before {
+        width: 200px;
+        height: 200px;
+    }
+
+    @media (max-width: 768px) {
+        .skills-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="skills-grid">
+    {% for skill in data.skills %}
+    <div class="skill-card">
+        <div class="skill-header">
+            <div class="skill-icon">{{ skill.icon }}</div>
+            <div class="skill-category">{{ skill.category }}</div>
+        </div>
+        <div class="skill-items">
+            {% for item in skill['items'] %}
+            <span class="skill-tag">{{ item }}</span>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>

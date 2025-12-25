@@ -1,0 +1,120 @@
+<h2 class="section-title">About Me</h2>
+
+<style>
+    .about-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .about-stat {
+        padding: 25px;
+        background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(138, 43, 226, 0.05));
+        border-radius: 15px;
+        border: 1px solid rgba(0, 212, 255, 0.2);
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .about-stat:hover {
+        transform: translateY(-5px);
+        border-color: rgba(0, 212, 255, 0.5);
+        box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+    }
+
+    .about-stat-label {
+        font-size: 0.9rem;
+        color: #808080;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+
+    .about-stat-value {
+        font-size: 1.8rem;
+        font-weight: bold;
+        background: linear-gradient(135deg, #00d4ff, #8a2be2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .about-description {
+        background: rgba(0, 212, 255, 0.03);
+        padding: 30px;
+        border-radius: 15px;
+        border-left: 3px solid #00d4ff;
+        margin-bottom: 20px;
+        line-height: 1.8;
+    }
+
+    .about-description p {
+        margin-bottom: 15px;
+        color: #c0c0c0;
+    }
+
+    .certifications {
+        margin-top: 30px;
+    }
+
+    .certifications h3 {
+        color: #00d4ff;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+    }
+
+    .cert-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 12px;
+    }
+
+    .cert-item {
+        padding: 15px;
+        background: rgba(138, 43, 226, 0.05);
+        border-radius: 10px;
+        border-left: 3px solid #8a2be2;
+        color: #b0b0b0;
+        transition: all 0.3s ease;
+    }
+
+    .cert-item:hover {
+        background: rgba(138, 43, 226, 0.1);
+        transform: translateX(5px);
+    }
+
+    .cert-item::before {
+        content: '🎓 ';
+        margin-right: 8px;
+    }
+</style>
+
+<div class="about-grid">
+    <div class="about-stat">
+        <div class="about-stat-label">Experience</div>
+        <div class="about-stat-value">{{ data.about.years_experience }}</div>
+    </div>
+    <div class="about-stat">
+        <div class="about-stat-label">NOC Focus</div>
+        <div class="about-stat-value">{{ data.about.noc_focus }}</div>
+    </div>
+    <div class="about-stat">
+        <div class="about-stat-label">Education</div>
+        <div class="about-stat-value">{{ data.about.education }}</div>
+    </div>
+</div>
+
+<div class="about-description">
+    <p><strong>{{ data.about.description }}</strong></p>
+    <p>{{ data.about.full_description }}</p>
+</div>
+
+<div class="certifications">
+    <h3>Certifications & Credentials</h3>
+    <div class="cert-list">
+        {% for cert in data.certifications %}
+        <div class="cert-item">{{ cert }}</div>
+        {% endfor %}
+    </div>
+</div>

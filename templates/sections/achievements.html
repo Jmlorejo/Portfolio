@@ -1,0 +1,137 @@
+<h2 class="section-title">Key Achievements</h2>
+
+<style>
+    .achievements-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .achievement-card {
+        padding: 40px 30px;
+        background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(138, 43, 226, 0.08));
+        border-radius: 20px;
+        border: 2px solid rgba(0, 212, 255, 0.2);
+        text-align: center;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .achievement-card::before {
+        content: '';
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        width: 300%;
+        height: 300%;
+        background: conic-gradient(
+            from 0deg,
+            transparent 0deg,
+            rgba(0, 212, 255, 0.1) 90deg,
+            transparent 180deg
+        );
+        animation: rotate-gradient 4s linear infinite;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    @keyframes rotate-gradient {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .achievement-card:hover {
+        transform: translateY(-15px) scale(1.05);
+        border-color: rgba(0, 212, 255, 0.6);
+        box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
+    }
+
+    .achievement-card:hover::before {
+        opacity: 1;
+    }
+
+    .achievement-icon {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.6));
+        animation: bounce 2s ease-in-out infinite;
+        position: relative;
+        z-index: 1;
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0) scale(1); }
+        50% { transform: translateY(-10px) scale(1.1); }
+    }
+
+    .achievement-card:nth-child(1) .achievement-icon { animation-delay: 0s; }
+    .achievement-card:nth-child(2) .achievement-icon { animation-delay: 0.3s; }
+    .achievement-card:nth-child(3) .achievement-icon { animation-delay: 0.6s; }
+    .achievement-card:nth-child(4) .achievement-icon { animation-delay: 0.9s; }
+
+    .achievement-metric {
+        font-size: 3rem;
+        font-weight: bold;
+        background: linear-gradient(135deg, #00d4ff, #8a2be2, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 10px;
+        text-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+        position: relative;
+        z-index: 1;
+    }
+
+    .achievement-label {
+        font-size: 1.1rem;
+        color: #b0b0b0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .achievement-card:hover .achievement-label {
+        color: #ffffff;
+    }
+
+    /* Glow effect on hover */
+    .achievement-card:hover .achievement-metric {
+        animation: glow 1.5s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+        0%, 100% {
+            filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
+        }
+        50% {
+            filter: drop-shadow(0 0 20px rgba(0, 212, 255, 1));
+        }
+    }
+
+    @media (max-width: 768px) {
+        .achievements-grid {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .achievement-metric {
+            font-size: 2.5rem;
+        }
+
+        .achievement-icon {
+            font-size: 3rem;
+        }
+    }
+</style>
+
+<div class="achievements-grid">
+    {% for achievement in data.achievements %}
+    <div class="achievement-card">
+        <div class="achievement-icon">{{ achievement.icon }}</div>
+        <div class="achievement-metric">{{ achievement.metric }}</div>
+        <div class="achievement-label">{{ achievement.label }}</div>
+    </div>
+    {% endfor %}
+</div>

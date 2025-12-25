@@ -1,0 +1,152 @@
+<h2 class="section-title">Professional Experience</h2>
+
+<style>
+    .timeline {
+        position: relative;
+        padding-left: 40px;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(180deg, #00d4ff, #8a2be2, #00d4ff);
+    }
+
+    .experience-item {
+        position: relative;
+        margin-bottom: 50px;
+        padding: 30px;
+        background: linear-gradient(135deg, rgba(0, 212, 255, 0.03), rgba(138, 43, 226, 0.03));
+        border-radius: 15px;
+        border: 1px solid rgba(0, 212, 255, 0.15);
+        transition: all 0.3s ease;
+    }
+
+    .experience-item:hover {
+        transform: translateX(10px);
+        border-color: rgba(0, 212, 255, 0.4);
+        box-shadow: 0 10px 40px rgba(0, 212, 255, 0.15);
+    }
+
+    .experience-item::before {
+        content: '';
+        position: absolute;
+        left: -50px;
+        top: 30px;
+        width: 16px;
+        height: 16px;
+        background: linear-gradient(135deg, #00d4ff, #8a2be2);
+        border-radius: 50%;
+        border: 3px solid #0a0a0a;
+        box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+        animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+        0%, 100% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.6); }
+        50% { box-shadow: 0 0 30px rgba(0, 212, 255, 1); }
+    }
+
+    .experience-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .experience-role {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 5px;
+    }
+
+    .experience-company {
+        font-size: 1.2rem;
+        background: linear-gradient(135deg, #00d4ff, #8a2be2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 600;
+    }
+
+    .experience-period {
+        padding: 8px 16px;
+        background: rgba(138, 43, 226, 0.2);
+        border-radius: 20px;
+        color: #00d4ff;
+        font-size: 0.9rem;
+        border: 1px solid rgba(138, 43, 226, 0.3);
+        white-space: nowrap;
+    }
+
+    .experience-highlights {
+        list-style: none;
+    }
+
+    .experience-highlights li {
+        padding: 12px 0 12px 30px;
+        color: #b0b0b0;
+        position: relative;
+        line-height: 1.6;
+        transition: all 0.3s ease;
+    }
+
+    .experience-highlights li:hover {
+        color: #e0e0e0;
+        transform: translateX(5px);
+    }
+
+    .experience-highlights li::before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: #00d4ff;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+    }
+
+    .experience-highlights li:hover::before {
+        color: #8a2be2;
+        transform: translateX(5px);
+    }
+
+    @media (max-width: 768px) {
+        .timeline {
+            padding-left: 30px;
+        }
+
+        .experience-item::before {
+            left: -40px;
+        }
+
+        .experience-header {
+            flex-direction: column;
+        }
+    }
+</style>
+
+<div class="timeline">
+    {% for exp in data.experience %}
+    <div class="experience-item">
+        <div class="experience-header">
+            <div>
+                <div class="experience-role">{{ exp.role }}</div>
+                <div class="experience-company">{{ exp.company }}</div>
+            </div>
+            <div class="experience-period">{{ exp.period }}</div>
+        </div>
+        <ul class="experience-highlights">
+            {% for highlight in exp.highlights %}
+            <li>{{ highlight }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+</div>
