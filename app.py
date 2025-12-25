@@ -134,6 +134,10 @@ def get_section(section):
 def test_image():
     return send_from_directory('static', 'profile.jpg')
 
+@app.route('/resume')
+def resume():
+    return send_from_directory('static', 'Porfolio.pdf')
+
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5001))
     app.run(debug=False, host='0.0.0.0', port=port)

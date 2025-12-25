@@ -450,6 +450,29 @@
             transform: translateY(-2px);
         }
 
+        .resume-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #ffffff, #e0e0e0);
+            color: #000000;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 30px;
+            border: 2px solid #ffffff;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .resume-btn:hover {
+            background: linear-gradient(135deg, #f0f0f0, #ffffff);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(255, 255, 255, 0.5);
+        }
+
         .social-links {
             display: flex;
             justify-content: center;
@@ -780,6 +803,8 @@
                     <span>{{ data.location }}</span>
                 </div>
             </div>
+
+            <a href="/resume" target="_blank" class="resume-btn">View Resume</a>
 
             <div class="social-links">
                 <a href="{{ data.socials.github }}" target="_blank" class="social-link" title="GitHub">
