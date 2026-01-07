@@ -21,7 +21,7 @@ PORTFOLIO_DATA = {
     },
 
     'about': {
-        'years_experience': '6+ Years',
+        'years_experience': '8+ Years',
         'noc_focus': '2+ Years',
         'education': 'BS Computer Engineering',
         'description': 'Enterprise-scale Network Operations Center engineer with 6+ years of IT and 2 years in network operations, specializing in serviceability, observability, incident management, and operational excellence.',
