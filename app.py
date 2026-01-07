@@ -50,14 +50,18 @@ PORTFOLIO_DATA = {
             ]
         },
         {
-            'role': 'System Engineer (NOC)',
+            'role': 'System/NOC Engineer',
             'company': 'IT By Design',
             'period': 'Feb 2024 - May 2025',
             'highlights': [
-                'Monitored and optimized network performance using Auvik, Meraki, NinjaOne, ConnectWise',
-                'Troubleshot LAN/WAN/VPN/firewall issues across enterprise infrastructure',
-                'Managed Windows Servers (2008-2022) and Azure cloud services',
-                'Administered ITSM tools: ServiceNow, ConnectWise, AutoTask, Kaseya'
+                'Deployed across 15+ SME clients managing 200+ hybrid cloud/on-premises endpoints (Azure, AWS)',
+                'Reduced alert volume by 35-40% through intelligent correlation and threshold tuning',
+                'Achieved 99.2%+ uptime across client portfolio; improved MTTR by 33% (45+ min → 30 min)',
+                'Led 6-person team unofficially; mentored junior engineers and standardized incident response',
+                'Processed 30-50 tickets daily across Connectwise Manage, Autotask, Halo, Kaseya, ServiceNow',
+                'Implemented Okta/Duo MFA across 15+ client environments for improved security compliance',
+                'Created 20+ knowledge base articles, reducing average resolution time to 15 minutes',
+                'Maintained 95%+ SLA compliance; resolved ticket backlog from 150+ to <20'
             ]
         },
         {
