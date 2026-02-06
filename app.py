@@ -140,7 +140,17 @@ def test_image():
 
 @app.route('/resume')
 def resume():
-    return send_from_directory('static', 'Porfolio.pdf')
+    # Serve the resume PDF. Try canonical filenames and fall back for older names.
+    candidates = [
+        'John_Mark_Lorejo.pdf',
+        'John_Mark_Lorejo_Resume.pdf',
+        'Porfolio.pdf',
+    ]
+    for fname in candidates:
+        path = os.path.join(app.static_folder, fname)
+        if os.path.exists(path):
+            return send_from_directory('static', fname)
+    return "Resume not found", 404
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5001))

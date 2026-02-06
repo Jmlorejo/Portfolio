@@ -26,13 +26,22 @@ git clone https://github.com/Jmlorejo/portfolio.git
 cd portfolio
 ```
 
-2. Install dependencies:
-```bash
-pip install flask
+2. Recommended: create and use a virtual environment, then install from `requirements.txt`:
+```powershell
+# create venv (PowerShell)
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+You can also run the included setup script (PowerShell):
+```powershell
+.\setup.ps1
 ```
 
 3. Run the application:
-```bash
+```powershell
 python app.py
 ```
 
