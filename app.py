@@ -41,12 +41,15 @@ PORTFOLIO_DATA = {
             'company': 'Trust Wallet',
             'period': 'May 2025 - Present',
             'highlights': [
-                'Operate enterprise-scale NOC managing 12+ microservices across multi-region AWS (220M+ users)',
-                'Implemented real-time observability infrastructure using Grafana, LogicMonitor, Auvik',
-                'Achieved 30-50% alert noise reduction through intelligent event correlation & tuning',
-                'Executed P1/P2/P3 incident triage with SLA compliance (30-min to 4-24 hrs MTTR)',
-                'Designed business service-level monitoring for crypto workflows (on/off ramps, staking, swaps)',
-                'Automated critical event detection via Crypto Events Bot for network upgrades & security threats'
+                'Operated enterprise-scale Network Operations Center (NOC) managing 12+ microservices with 10+ components each across multi-region AWS infrastructure serving 220M+ users',
+                'Implemented real-time observability and monitoring infrastructure using Grafana and API calls to maintain business-critical dashboards tracking service health, error rates, and availability KPIs',
+                'Achieved 30% alert noise reduction through in-depth investigation, collaboration and event correlation, alert tuning, and false-positive validation; collaborated with cross-functional resolver teams on anomaly detection and root cause analysis',
+                'Executed P0/P1/P2/P3 incident triage and escalation with SLA compliance',
+                'Led post-incident reviews and postmortems; drove resilience and availability initiatives with MTTD/MTTR optimization reporting to senior management on weekly basis',
+                'Focusing business service-level monitoring (BSM) for mission-critical crypto transaction workflows including on/off ramps, staking, swaps, transfers, deposits, and withdrawals with full telemetry visibility',
+                'Automated critical event detection via AI-powered Crypto Events Bot by fetching and delivering real-time intelligence on hardforks, network upgrades, and security threats to organization-wide messaging platform',
+                'As one of the pioneer NOC engineers, acted as first-line engineering support by replicating, triaging, and analyzing logs for CS-escalated issues, escalating confirmed bugs with detailed findings to the appropriate engineering teams, and authoring runbooks for newly identified issues to standardize resolution processes.',
+                'Served as part of the on-call rotation, responding to after-hours critical incidents and ensuring continuous 24/7 client infrastructure coverage with minimal disruption to operations'
             ]
         },
         {
@@ -54,14 +57,15 @@ PORTFOLIO_DATA = {
             'company': 'IT By Design',
             'period': 'Feb 2024 - May 2025',
             'highlights': [
-                'Deployed across 15+ SME clients managing 200+ hybrid cloud/on-premises endpoints (Azure, AWS)',
-                'Reduced alert volume by 35-40% through intelligent correlation and threshold tuning',
-                'Achieved 99.2%+ uptime across client portfolio; improved MTTR by 33% (45+ min → 30 min)',
-                'Led 6-person team unofficially; mentored junior engineers and standardized incident response',
-                'Processed 30-50 tickets daily across Connectwise Manage, Autotask, Halo, Kaseya, ServiceNow',
-                'Implemented Okta/Duo MFA across 15+ client environments for improved security compliance',
-                'Created 20+ knowledge base articles, reducing average resolution time to 15 minutes',
-                'Maintained 95%+ SLA compliance; resolved ticket backlog from 150+ to <20'
+                'Monitored network and system performance in real-time across multiple client environments using Auvik, Meraki, NinjaOne, ConnectWise Automate, N-able, LogicMonitor, and Datto RMM, proactively identifying and resolving issues before client impact',
+                'Managed and maintained Windows Server environments spanning versions 2008 through 2022, performing routine administration, patch management, and performance tuning across multiple client infrastructures',
+                'Managed, and maintained virtual machines on VMware, vSphere, and Hyper-V platforms, handling provisioning, snapshots, resource allocation, and VM-level troubleshooting',
+                'Administered ITSM platforms including ServiceNow, ConnectWise Manage, Autotask, Kaseya, and HALO for end-to-end incident lifecycle management, service request handling, change tracking, and SLA compliance',
+                'Managed and monitored client backup solutions using Veeam, Datto Backup, and Acronis, ensuring backup integrity, scheduling, and successful recovery testing',
+                'Administrated Active Directory, Microsoft Exchange, and Microsoft 365 environments including user provisioning, group policy management, mailbox administration, and license assignments',
+                'Provided IT helpdesk support across multiple client accounts, handling hardware diagnostics and replacements, network connectivity issues, and peripheral setup including printers and workstations',
+                'Managed user onboarding and offboarding workflows including account creation and deactivation, access management, email setup, and equipment provisioning',
+                'Coordinated with client-facing teams and third-party vendors to communicate incident status, resolution timelines, and post-incident summaries to ensure client satisfaction and transparency'
             ]
         },
         {
