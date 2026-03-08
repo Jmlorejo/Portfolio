@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Mark Lorejo - System Engineer</title>
+    <title>John Mark Lorejo - NOC Engineer</title>
     <style>
         * {
             margin: 0;
@@ -781,7 +781,7 @@
     <section class="hero">
         <div class="hero-content">
             <div class="profile-image-container">
-                <img src="static/profile.jpg" alt="John Mark Lorejo" class="profile-image">
+                <img src="/static/profile.jpg" alt="John Mark Lorejo" class="profile-image">
             </div>
             <div class="subtitle">Hi I am John Mark Lorejo</div>
             <h1><span class="typing-text" id="typing-text"></span></h1>
@@ -804,7 +804,7 @@
                 </div>
             </div>
 
-            <a href="static/John_Mark_Lorejo_Resume.pdf" target="_blank" class="resume-btn">View Resume</a>
+            <a href="/resume" target="_blank" class="resume-btn">View Resume</a>
 
             <div class="social-links">
                 <a href="https://github.com/Jmlorejo" target="_blank" class="social-link" title="GitHub">
@@ -1268,17 +1268,23 @@
         </div>
         <ul class="experience-highlights">
             
-            <li>Operate enterprise-scale NOC managing 12+ microservices across multi-region AWS (220M+ users)</li>
+            <li>Operated enterprise-scale Network Operations Center (NOC) managing 12+ microservices with 10+ components each across multi-region AWS infrastructure serving 220M+ users</li>
             
-            <li>Implemented real-time observability infrastructure using Grafana, LogicMonitor, Auvik</li>
+            <li>Implemented real-time observability and monitoring infrastructure using Grafana and API calls to maintain business-critical dashboards tracking service health, error rates, and availability KPIs</li>
             
-            <li>Achieved 30-50% alert noise reduction through intelligent event correlation &amp; tuning</li>
+            <li>Achieved 30% alert noise reduction through in-depth investigation, collaboration and event correlation, alert tuning, and false-positive validation; collaborated with cross-functional resolver teams on anomaly detection and root cause analysis</li>
             
-            <li>Executed P1/P2/P3 incident triage with SLA compliance (30-min to 4-24 hrs MTTR)</li>
+            <li>Executed P0/P1/P2/P3 incident triage and escalation with SLA compliance</li>
             
-            <li>Designed business service-level monitoring for crypto workflows (on/off ramps, staking, swaps)</li>
+            <li>Led post-incident reviews and postmortems; drove resilience and availability initiatives with MTTD/MTTR optimization reporting to senior management on weekly basis</li>
             
-            <li>Automated critical event detection via Crypto Events Bot for network upgrades &amp; security threats</li>
+            <li>Focusing business service-level monitoring (BSM) for mission-critical crypto transaction workflows including on/off ramps, staking, swaps, transfers, deposits, and withdrawals with full telemetry visibility</li>
+            
+            <li>Automated critical event detection via AI-powered Crypto Events Bot by fetching and delivering real-time intelligence on hardforks, network upgrades, and security threats to organization-wide messaging platform</li>
+            
+            <li>As one of the pioneer NOC engineers, acted as first-line engineering support by replicating, triaging, and analyzing logs for CS-escalated issues, escalating confirmed bugs with detailed findings to the appropriate engineering teams, and authoring runbooks for newly identified issues to standardize resolution processes.</li>
+            
+            <li>Served as part of the on-call rotation, responding to after-hours critical incidents and ensuring continuous 24/7 client infrastructure coverage with minimal disruption to operations</li>
             
         </ul>
     </div>
@@ -1286,29 +1292,31 @@
     <div class="experience-item">
         <div class="experience-header">
             <div>
-                <div class="experience-role">System Engineer (NOC)</div>
+                <div class="experience-role">System/NOC Engineer</div>
                 <div class="experience-company">IT By Design</div>
             </div>
             <div class="experience-period">Feb 2024 - May 2025</div>
         </div>
         <ul class="experience-highlights">
-
-            <li>Deployed across 15+ SME clients as NOC Engineer managing 200+ hybrid cloud/on-premises endpoints (Azure, AWS)</li>
-
-            <li>Proactively monitored 200+ endpoints using Auvik, Meraki, LogicMonitor with 15-min average MTTR</li>
-
-            <li>Triaged and processed 30-50 tickets daily across Connectwise Manage, Autotask, Halo, Kaseya, ServiceNow</li>
-
-            <li>Led 6-person team unofficially; mentored junior engineers and standardized incident response procedures</li>
-
-            <li>Reduced alert volume by 35-40% through intelligent correlation and threshold tuning</li>
-
-            <li>Achieved 99.2%+ uptime across client portfolio; maintained 95%+ SLA compliance</li>
-
-            <li>Implemented Okta/Duo MFA across 15+ client environments, improving access control and compliance</li>
-
-            <li>Created 20+ knowledge base articles, reducing avg resolution time to 15 minutes per ticket</li>
-
+            
+            <li>Monitored network and system performance in real-time across multiple client environments using Auvik, Meraki, NinjaOne, ConnectWise Automate, N-able, LogicMonitor, and Datto RMM, proactively identifying and resolving issues before client impact</li>
+            
+            <li>Managed and maintained Windows Server environments spanning versions 2008 through 2022, performing routine administration, patch management, and performance tuning across multiple client infrastructures</li>
+            
+            <li>Managed, and maintained virtual machines on VMware, vSphere, and Hyper-V platforms, handling provisioning, snapshots, resource allocation, and VM-level troubleshooting</li>
+            
+            <li>Administered ITSM platforms including ServiceNow, ConnectWise Manage, Autotask, Kaseya, and HALO for end-to-end incident lifecycle management, service request handling, change tracking, and SLA compliance</li>
+            
+            <li>Managed and monitored client backup solutions using Veeam, Datto Backup, and Acronis, ensuring backup integrity, scheduling, and successful recovery testing</li>
+            
+            <li>Administrated Active Directory, Microsoft Exchange, and Microsoft 365 environments including user provisioning, group policy management, mailbox administration, and license assignments</li>
+            
+            <li>Provided IT helpdesk support across multiple client accounts, handling hardware diagnostics and replacements, network connectivity issues, and peripheral setup including printers and workstations</li>
+            
+            <li>Managed user onboarding and offboarding workflows including account creation and deactivation, access management, email setup, and equipment provisioning</li>
+            
+            <li>Coordinated with client-facing teams and third-party vendors to communicate incident status, resolution timelines, and post-incident summaries to ensure client satisfaction and transparency</li>
+            
         </ul>
     </div>
     
@@ -1477,19 +1485,17 @@
             <div class="skill-category">Observability &amp; Monitoring</div>
         </div>
         <div class="skill-items">
-
+            
             <span class="skill-tag">Grafana</span>
-
+            
             <span class="skill-tag">LogicMonitor</span>
-
+            
             <span class="skill-tag">Auvik</span>
-
-            <span class="skill-tag">Cisco Meraki</span>
-
+            
             <span class="skill-tag">APM</span>
-
+            
             <span class="skill-tag">Telemetry &amp; Analytics</span>
-
+            
         </div>
     </div>
     
@@ -1537,109 +1543,55 @@
             <div class="skill-category">Infrastructure &amp; Cloud</div>
         </div>
         <div class="skill-items">
-
+            
             <span class="skill-tag">AWS Multi-Region</span>
-
-            <span class="skill-tag">Azure (VMs, Networking, Hybrid)</span>
-
+            
             <span class="skill-tag">Windows Server</span>
-
-            <span class="skill-tag">Network Devices</span>
-
-            <span class="skill-tag">VoIP Systems</span>
-
+            
+            <span class="skill-tag">Azure AD</span>
+            
             <span class="skill-tag">Infrastructure Monitoring</span>
-
+            
+            <span class="skill-tag">Application Performance</span>
+            
         </div>
     </div>
-
+    
     <div class="skill-card">
         <div class="skill-header">
             <div class="skill-icon">🔐</div>
-            <div class="skill-category">Security &amp; EDR</div>
+            <div class="skill-category">Identity &amp; Access</div>
         </div>
         <div class="skill-items">
-
-            <span class="skill-tag">Sentinel One (EDR)</span>
-
+            
             <span class="skill-tag">Active Directory</span>
-
+            
             <span class="skill-tag">Azure AD</span>
-
-            <span class="skill-tag">Okta (IAM)</span>
-
-            <span class="skill-tag">Duo (MFA)</span>
-
+            
+            <span class="skill-tag">Okta</span>
+            
+            <span class="skill-tag">MFA Systems</span>
+            
             <span class="skill-tag">Access Control</span>
-
+            
         </div>
     </div>
-
-    <div class="skill-card">
-        <div class="skill-header">
-            <div class="skill-icon">💾</div>
-            <div class="skill-category">Backup &amp; Disaster Recovery</div>
-        </div>
-        <div class="skill-items">
-
-            <span class="skill-tag">Veeam</span>
-
-            <span class="skill-tag">Datto</span>
-
-            <span class="skill-tag">Acronis</span>
-
-            <span class="skill-tag">N-able Backup</span>
-
-            <span class="skill-tag">Windows Backup</span>
-
-            <span class="skill-tag">RPO/RTO Optimization</span>
-
-        </div>
-    </div>
-
-    <div class="skill-card">
-        <div class="skill-header">
-            <div class="skill-icon">🛠️</div>
-            <div class="skill-category">RMM &amp; Endpoint Management</div>
-        </div>
-        <div class="skill-items">
-
-            <span class="skill-tag">ConnectWise Automate</span>
-
-            <span class="skill-tag">Datto RMM</span>
-
-            <span class="skill-tag">N-able</span>
-
-            <span class="skill-tag">NinjaOne</span>
-
-            <span class="skill-tag">Continuum</span>
-
-            <span class="skill-tag">Kaseya</span>
-
-        </div>
-    </div>
-
+    
     <div class="skill-card">
         <div class="skill-header">
             <div class="skill-icon">🔧</div>
-            <div class="skill-category">ITSM &amp; Ticketing</div>
+            <div class="skill-category">ITSM &amp; Tools</div>
         </div>
         <div class="skill-items">
-
+            
             <span class="skill-tag">ServiceNow</span>
-
-            <span class="skill-tag">ConnectWise Manage</span>
-
-            <span class="skill-tag">Autotask</span>
-
-            <span class="skill-tag">Halo PSA</span>
-
+            
             <span class="skill-tag">Incident Management</span>
-
+            
             <span class="skill-tag">Runbook Creation</span>
-
+            
             <span class="skill-tag">SOP Documentation</span>
-
+            
         </div>
     </div>
     

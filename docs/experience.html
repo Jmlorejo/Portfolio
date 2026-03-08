@@ -1,0 +1,220 @@
+<h2 class="section-title">Professional Experience</h2>
+
+<style>
+    .timeline {
+        position: relative;
+        padding-left: 40px;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(180deg, #00d4ff, #8a2be2, #00d4ff);
+    }
+
+    .experience-item {
+        position: relative;
+        margin-bottom: 50px;
+        padding: 30px;
+        background: linear-gradient(135deg, rgba(0, 212, 255, 0.03), rgba(138, 43, 226, 0.03));
+        border-radius: 15px;
+        border: 1px solid rgba(0, 212, 255, 0.15);
+        transition: all 0.3s ease;
+    }
+
+    .experience-item:hover {
+        transform: translateX(10px);
+        border-color: rgba(0, 212, 255, 0.4);
+        box-shadow: 0 10px 40px rgba(0, 212, 255, 0.15);
+    }
+
+    .experience-item::before {
+        content: '';
+        position: absolute;
+        left: -50px;
+        top: 30px;
+        width: 16px;
+        height: 16px;
+        background: linear-gradient(135deg, #00d4ff, #8a2be2);
+        border-radius: 50%;
+        border: 3px solid #0a0a0a;
+        box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+        animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+        0%, 100% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.6); }
+        50% { box-shadow: 0 0 30px rgba(0, 212, 255, 1); }
+    }
+
+    .experience-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .experience-role {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 5px;
+    }
+
+    .experience-company {
+        font-size: 1.2rem;
+        background: linear-gradient(135deg, #00d4ff, #8a2be2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 600;
+    }
+
+    .experience-period {
+        padding: 8px 16px;
+        background: rgba(138, 43, 226, 0.2);
+        border-radius: 20px;
+        color: #00d4ff;
+        font-size: 0.9rem;
+        border: 1px solid rgba(138, 43, 226, 0.3);
+        white-space: nowrap;
+    }
+
+    .experience-highlights {
+        list-style: none;
+    }
+
+    .experience-highlights li {
+        padding: 12px 0 12px 30px;
+        color: #b0b0b0;
+        position: relative;
+        line-height: 1.6;
+        transition: all 0.3s ease;
+    }
+
+    .experience-highlights li:hover {
+        color: #e0e0e0;
+        transform: translateX(5px);
+    }
+
+    .experience-highlights li::before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: #00d4ff;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+    }
+
+    .experience-highlights li:hover::before {
+        color: #8a2be2;
+        transform: translateX(5px);
+    }
+
+    @media (max-width: 768px) {
+        .timeline {
+            padding-left: 30px;
+        }
+
+        .experience-item::before {
+            left: -40px;
+        }
+
+        .experience-header {
+            flex-direction: column;
+        }
+    }
+</style>
+
+<div class="timeline">
+    
+    <div class="experience-item">
+        <div class="experience-header">
+            <div>
+                <div class="experience-role">NOC Engineer</div>
+                <div class="experience-company">Trust Wallet</div>
+            </div>
+            <div class="experience-period">May 2025 - Present</div>
+        </div>
+        <ul class="experience-highlights">
+            
+            <li>Operated enterprise-scale Network Operations Center (NOC) managing 12+ microservices with 10+ components each across multi-region AWS infrastructure serving 220M+ users</li>
+            
+            <li>Implemented real-time observability and monitoring infrastructure using Grafana and API calls to maintain business-critical dashboards tracking service health, error rates, and availability KPIs</li>
+            
+            <li>Achieved 30% alert noise reduction through in-depth investigation, collaboration and event correlation, alert tuning, and false-positive validation; collaborated with cross-functional resolver teams on anomaly detection and root cause analysis</li>
+            
+            <li>Executed P0/P1/P2/P3 incident triage and escalation with SLA compliance</li>
+            
+            <li>Led post-incident reviews and postmortems; drove resilience and availability initiatives with MTTD/MTTR optimization reporting to senior management on weekly basis</li>
+            
+            <li>Focusing business service-level monitoring (BSM) for mission-critical crypto transaction workflows including on/off ramps, staking, swaps, transfers, deposits, and withdrawals with full telemetry visibility</li>
+            
+            <li>Automated critical event detection via AI-powered Crypto Events Bot by fetching and delivering real-time intelligence on hardforks, network upgrades, and security threats to organization-wide messaging platform</li>
+            
+            <li>As one of the pioneer NOC engineers, acted as first-line engineering support by replicating, triaging, and analyzing logs for CS-escalated issues, escalating confirmed bugs with detailed findings to the appropriate engineering teams, and authoring runbooks for newly identified issues to standardize resolution processes.</li>
+            
+            <li>Served as part of the on-call rotation, responding to after-hours critical incidents and ensuring continuous 24/7 client infrastructure coverage with minimal disruption to operations</li>
+            
+        </ul>
+    </div>
+    
+    <div class="experience-item">
+        <div class="experience-header">
+            <div>
+                <div class="experience-role">System/NOC Engineer</div>
+                <div class="experience-company">IT By Design</div>
+            </div>
+            <div class="experience-period">Feb 2024 - May 2025</div>
+        </div>
+        <ul class="experience-highlights">
+            
+            <li>Monitored network and system performance in real-time across multiple client environments using Auvik, Meraki, NinjaOne, ConnectWise Automate, N-able, LogicMonitor, and Datto RMM, proactively identifying and resolving issues before client impact</li>
+            
+            <li>Managed and maintained Windows Server environments spanning versions 2008 through 2022, performing routine administration, patch management, and performance tuning across multiple client infrastructures</li>
+            
+            <li>Managed, and maintained virtual machines on VMware, vSphere, and Hyper-V platforms, handling provisioning, snapshots, resource allocation, and VM-level troubleshooting</li>
+            
+            <li>Administered ITSM platforms including ServiceNow, ConnectWise Manage, Autotask, Kaseya, and HALO for end-to-end incident lifecycle management, service request handling, change tracking, and SLA compliance</li>
+            
+            <li>Managed and monitored client backup solutions using Veeam, Datto Backup, and Acronis, ensuring backup integrity, scheduling, and successful recovery testing</li>
+            
+            <li>Administrated Active Directory, Microsoft Exchange, and Microsoft 365 environments including user provisioning, group policy management, mailbox administration, and license assignments</li>
+            
+            <li>Provided IT helpdesk support across multiple client accounts, handling hardware diagnostics and replacements, network connectivity issues, and peripheral setup including printers and workstations</li>
+            
+            <li>Managed user onboarding and offboarding workflows including account creation and deactivation, access management, email setup, and equipment provisioning</li>
+            
+            <li>Coordinated with client-facing teams and third-party vendors to communicate incident status, resolution timelines, and post-incident summaries to ensure client satisfaction and transparency</li>
+            
+        </ul>
+    </div>
+    
+    <div class="experience-item">
+        <div class="experience-header">
+            <div>
+                <div class="experience-role">IT Helpdesk Technician / Command Centre Operations</div>
+                <div class="experience-company">ProbeCx</div>
+            </div>
+            <div class="experience-period">Jun 2022 - Feb 2024</div>
+        </div>
+        <ul class="experience-highlights">
+            
+            <li>First-line technical support &amp; incident triage via ServiceNow integration</li>
+            
+            <li>Diagnosed and remediated infrastructure issues across servers, endpoints, networks</li>
+            
+            <li>Managed Active Directory, Azure AD, Okta for identity &amp; access management</li>
+            
+            <li>Executed SOPs for time-sensitive production incidents with comprehensive runbooks</li>
+            
+        </ul>
+    </div>
+    
+</div>
