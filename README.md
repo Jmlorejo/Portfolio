@@ -56,6 +56,10 @@ Running the script will render the app’s routes and write the resulting HTML
 into `docs/`. Commit and push the updated `docs/` files and Pages will publish
 the new content.
 
+> **Tip:** a GitHub Action is included (`.github/workflows/static.yml`) that
+> automatically regenerates and commits `docs/` on every push to `main`, so you
+don't have to run the script manually unless you want to preview changes locally.
+
 ## Structure
 
 ```
