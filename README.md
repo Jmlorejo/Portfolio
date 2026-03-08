@@ -28,10 +28,10 @@ cd portfolio
 
 2. Install dependencies:
 ```bash
-pip install flask
+pip install -r requirements.txt
 ```
 
-3. Run the application:
+3. Run the application locally (useful for previewing changes):
 ```bash
 python app.py
 ```
@@ -40,6 +40,21 @@ python app.py
 ```
 http://localhost:5001
 ```
+
+### Static site generation
+
+This project uses GitHub Pages to host the public website (https://jmlorejo.github.io/Portfolio/).
+The Pages service can only serve static files, so you must regenerate the
+`docs/` folder whenever the Flask templates or data change. A helper script is
+included to automate this:
+
+```bash
+python generate_static.py
+``` 
+
+Running the script will render the app’s routes and write the resulting HTML
+into `docs/`. Commit and push the updated `docs/` files and Pages will publish
+the new content.
 
 ## Structure
 
